@@ -1,0 +1,21 @@
+@import './assets/colors/colors.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+
+    #root{
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+}

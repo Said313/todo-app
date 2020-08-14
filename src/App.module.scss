@@ -1,0 +1,40 @@
+@import './assets/colors/colors.scss';
+
+
+.container{
+    background: $backColor;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    .main{
+        width: 60%;
+        height: auto;
+        background: $mainBackColor;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px -1px black;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+
+        @media only screen and (max-width: 500px){
+            width: 80%;
+        }
+
+        .mainContents{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0px;
+            padding-left: 5%;
+
+            @media only screen and (max-width: 500px){
+                margin-top: 20px;
+            }
+        }
+    }
+}
