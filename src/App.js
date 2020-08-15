@@ -31,6 +31,21 @@ class App extends Component{
         })
     }
 
+    handleDelete = id => {
+        this.setState(prevState => {
+            return {
+                todoInfo: prevState.todoInfo.map(item => {
+                    if(item.id !== id){
+                        return item
+                    } else {
+                        item.show = false
+                        return item
+                    }
+                })
+            }
+        })
+    }
+
     handlePlusClick = () => {
         this.setState(prevState => {return {isAdding: !prevState.isAdding}})
     }
@@ -65,6 +80,7 @@ class App extends Component{
             return <TodoItem    key = {item.id} 
                                 todo={item} 
                                 handleChange = {this.handleChange}
+                                handleDelete = {this.handleDelete}
                     />
         });
 
