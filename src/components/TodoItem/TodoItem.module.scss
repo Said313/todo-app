@@ -33,4 +33,20 @@
         color: #4c4c4c;
         font-style: oblique;
     }
+
+    .trashBin{
+        position: absolute;
+        right: 0;
+        color: $backColor;
+        display: none;
+    }
+
+    .trashBinAppear{
+        display: inline-block;
+    }
+
+    .trashBinHovered{
+        color: $redColor;
+        cursor: pointer;
+    }
 }

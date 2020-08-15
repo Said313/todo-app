@@ -47,7 +47,8 @@ class App extends Component{
                 newTodosArray.unshift({
                     id: prevState.count + 1,
                     text: newTodoText,
-                    completed: false
+                    completed: false,
+                    show: true
                 })
 
                 return {
@@ -60,7 +61,13 @@ class App extends Component{
     }
 
     render(){
-        const arrayTodoItems = this.state.todoInfo.map((item)=><TodoItem key = {item.id} todo={item} handleChange = {this.handleChange}/>);
+        const arrayTodoItems = this.state.todoInfo.map((item)=>{
+            return <TodoItem    key = {item.id} 
+                                todo={item} 
+                                handleChange = {this.handleChange}
+                    />
+        });
+
         return (
             <div className={styles.container}>
                 <AddTodo 
